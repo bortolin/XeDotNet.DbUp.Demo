@@ -1,0 +1,24 @@
+﻿@using XeDotNet.BeerShop.Model
+
+@model IEnumerable<Beer>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Beers price list</h1>
+@*<div><img src="~/images/Beers.jpg" width="25%"/></div>*@
+
+<div>
+
+    @foreach (var item in Model)
+    {
+        <p>
+            <b>@item.Name</b> (@item.Size) - Euro <i>@item.Price.ToString("0.00")</i>
+        </p>
+    }
+
+</div>
+
+   
